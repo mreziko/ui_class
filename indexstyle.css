@@ -1,0 +1,21 @@
+
+
+#title{color: crimson}
+.container table,.container th, .container td{border-collapse: collapse;
+            text-align: left;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 5%;
+            width: 60%;
+}
+
+.container td, .container th{
+
+    border: 1px solid rgba(116, 116, 116, 0.62);
+    text-align: left;
+    padding: 8px;
+}
+.container tr:nth-child(even) {
+    background-color: #dadada;
+
+}
