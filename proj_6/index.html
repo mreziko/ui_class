@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/ui_class/proj_6/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="/ui_class/proj_6/node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/ui_class/proj_6/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+</head>
+<body>
+<div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a>
+        </li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique sem enim,nar scelerisque quam.</div>
+        <div role="tabpanel" class="tab-pane" id="profile">...</div>
+        <div role="tabpanel" class="tab-pane" id="messages">...</div>
+        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+    </div>
+
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Sign up
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row" >
+                        <div class="col-md-8" style="text-align: center">Form</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">First Name</div>
+                        <div class="col-md-4"><input type="text" name="text" placeholder="Enter First Name" ></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Last Name</div>
+                        <div class="col-md-4"><input type="text" name="text" placeholder="Enter Last Name"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Gender</div>
+                        <div class="col-md-2"><input type="radio" name="gender" value="Male">Male <input type="radio"
+                                                                                                         name="gender" value="Female">Female <input type="radio" name="gender" value="Other">Other   </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Country</div>
+                        <div class="col-md-2">
+                            <select name="countries">
+                                <option value="">Select a country</option>
+                                <option value="alg">Algeria</option>
+                                <option value="afg">Afghanistan</option>
+                                <option value="ind">India</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Class Taken</div>
+                        <div class="col-md-2" >
+                            <input type="checkbox" name="java" value="java">Java <br>
+                            <input type="checkbox" name="c#" value="c#">C#<br>
+                            <input type="checkbox" name="vmware" value="vmware">VmWare<br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
