@@ -4,93 +4,161 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script type="text/javascript" src="../js/student.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+    <body>
 
-<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Sign up
+    </button>
+        <form class="modal fade" name="contact" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">New Student</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Sign up
-</button>
-
-    <form class="modal fade" name="contact" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">New Student</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row" >
-                            <div class="col-md-8" style="text-align: center"><h3></h3></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">First Name</div>
-                            <div class="col-md-8"><input type="text" name="text" id="fname" placeholder="Enter First Name" ></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">Last Name</div>
-                            <div class="col-md-8"><input type="text" name="text"  id="lname" placeholder="Enter Last Name"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">Gender</div>
-                            <div class="col-md-8">
-                                <input type="radio" name="gender" value="Male">Male
-                                <input type="radio"  name="gender" value="Female">Female
-                                <input type="radio" name="gender" value="Other">Other
+                            <div class="row">
+                                <!--div class="col-md-4">First Name</--div>-->
+                                <div class="col-md-3">
+                                <label id="firstNameLbl">First Name</label>
+                                </div>
+                               <!-- <div class="col-md-8"><input type="text" name="text" id="fname" placeholder="Enter First Name" ></div>-->
+                                <div class="col-md-9">
+                                    <input type="text" id="fname" name="firstName"  placeholder="Enter First Name" >
+                                    <span id="fnameErr"></span>
+                                </div>
+                             </div>
+                            <div class="row">
+                                <!--div class="col-md-4">Last Name</div-->
+                                <div class="col-md-3">
+                                    <label id="lastNameLbl">Last Name</label>
+                                </div>
+                                <!--div class="col-md-8"><input type="text" name="text"  id="lname" placeholder="Enter Last Name"></div-->
+                                <div class="col-md-9">
+                                    <input type="text" id="lname" name="lastName"  placeholder="Enter Last Name" >
+                                    <span id="lnameErr"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">Address</div>
-                            <div class="col-md-8"><input type="text" name="text" id="@dress" placeholder="Enter Your Address"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">City</div>
-                            <div class="col-md-8">
-                            <select name="cities" id="cities">
-                                <option value="" >Select a City</option>
-                                <option value="dal" >Dallas</option>
-                                <option value="San_A">San Antonio</option>
-                                <option value="Aus" >Austin</option>
-                            </select>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">Country</div>
-                            <div class="col-md-8">
-                                <select name="countries" id="countries">
-                                    <option value="">Select a country</option>
-                                    <option value="alg">Algeria</option>
-                                    <option value="afg">Afghanistan</option>
-                                    <option value="ind">India</option>
+                            <div class="row">
+                                <!--div class="col-md-4">Gender</div-->
+                                <div class="col-md-3">
+                                    <label id="genderLbl">Gender</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="radio" name="gender" value="Male">Male
+                                    <input type="radio"  name="gender" value="Female">Female
+                                    <input type="radio" name="gender" value="Other">Other
+                                    <span id="gendErr"></span>
+                                </div>
+                                <!--div class="col-md-8">
+                                    <input type="radio" name="gender" value="Male">Male
+                                    <input type="radio"  name="gender" value="Female">Female
+                                    <input type="radio" name="gender" value="Other">Other
+                                </div-->
+                            </div>
+                            <div class="row">
+                                <!--div class="col-md-4">Address</div-->
+                                <div class="col-md-3">
+                                    <label id="addressLbl">Address</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" name="text" id="adress" placeholder="Enter Your Address">
+                                    <span id="addressErr"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!--div class="col-md-4">City</div-->
+                                <div class="col-md-3">
+                                    <label id="cityLbl">City</label>
+                                </div>
+                               <div class="col-md-9">
+                                <select name="cities" id="cities">
+                                    <option value="" >Select a City</option>
+                                    <option value="dal" >Dallas</option>
+                                    <option value="San_A">San Antonio</option>
+                                    <option value="Aus" >Austin</option>
                                 </select>
+                                <span id="cityErr"></span>
+                                </div>
+                             </div>
+                            <div class="row">
+                                <!--div class="col-md-4">Country</div-->
+                                <div class="col-md-3">
+                                    <label id="countryLbl">Country</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name="countries" id="countries">
+                                        <option value="">Select a country</option>
+                                        <option value="alg">Algeria</option>
+                                        <option value="afg">Afghanistan</option>
+                                        <option value="ind">India</option>
+                                    </select>
+                                    <span id="countError"></span>
+                                </div>
                             </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">Phone Number</div>
-                            <div class="col-md-8" >
-                                <input type="text" name="phone"  id="phone" placeholder="Enter Your Phone Number" > <br>
-
+                            <div class="row">
+                                <!--div class="col-md-4">Phone Number</div-->
+                                <div class="col-md-3">
+                                    <label id="phoneLbl">Phone</label>
+                                </div>
+                                <div class="col-md-9" >
+                                    <input type="text" name="phone"  id="phone" placeholder="Enter Your Phone Number" > <br>
+                                    <span id="phonError"></span>
+                                </div>
                             </div>
                         </div>
-
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="addStudent(event)">Save changes</button>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="addStudent(event)">Save changes</button>
-                </div>
             </div>
-        </div>
-    </div>
-</form>
 
-<button type="button" class="btn btn-default" data-toggle="modal"  onclick="traversArray(event)">
-Display</button>
-<div id="display"></div>
-</body>
+        </form>
+
+                    <div id="display">
+                        <button type="button" class="btn btn-default" data-toggle="modal"  onclick="traversArray(event)">
+                            Display
+                        </button>
+                    </div>
+                    <button id="btn1" >
+                        Button
+                    </button>
+                    <hr>
+                    <div id="first">
+                        First Contents
+                    </div>
+                    <div id="second">
+                        Second Contents
+                    </div>
+                    <hr>
+
+                    <button id="firstbtn">
+                        Display First
+                    </button>
+                    <button id="secbtn">
+                        Display Second
+                    </button>
+                    <button id="thirdbtn">
+                        Display All
+                    </button>
+                    <button id="btn4" onclick="">
+                        Add_Class
+                    </button>
+                    <button id="btn5" onclick="">
+                        Remove_Class
+                    </button>
+
+                <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+                <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+                <script type="text/javascript" src="../js/student.js"></script>
+    </body>
 </html>
