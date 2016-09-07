@@ -140,6 +140,8 @@ function traversArray(e) {
 
 
  $(document).ready(function(){
+
+
      $('#first').hide();
      $('#second').hide();
     // $('#btn1').click(function () {  //
