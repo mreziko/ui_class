@@ -9,7 +9,7 @@ var connection = require("express-myconnection");
 var app = express();
 
 app.use(bodyParser.json()); // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({ // to suport URL-encoded bodies
+app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
     extended:true
 }));
 
@@ -46,17 +46,17 @@ app.get("/service/customer",function (req, res, next) {
     });
 });
 
-app.get("/service/:customerid",function (req, res, next) {
-    //Array to store to store dynamic parameters
+app.get("/service/customer/:customerid",function (req, res, next) {
+    //Array to store dynamic parameters
     var ids = [];
     var customerid = req.params.customerid;
-    id.push(customerid);
+    ids.push(customerid);
 
     /*for (var i=0 ;i<params.length; i++{
      ids.push(req.params[params[i]];
      }
      */
-    var query = "SELECT * FROM customer where customerid = ?" ;
+    var query = "SELECT * FROM customer where customerid = ?";
     req.getConnection(function (err, connection) {
         if(err) return next(err);
 

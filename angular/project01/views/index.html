@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Project</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.css">
+</head>
+<body ng-app="app">  <!-- import angular here ... will create root scope  -->
+
+    <div  class="container-fluid" ng-controller="AppCtrl">
+        <!--input type="text" ng-model="person.name" id="name">
+        <h1> {{person.name}}</h1>
+        {{:: person.name}}-->
+
+        <!--app-title></app-title--> <!--element-->
+
+        <!--div  app-title></div > <Attribut-->
+
+        <!--div class="app-title"></div> <!--Class-->
+
+        <div class="row">
+            <div class="col-md-12" >
+                <h1>{{title}}</h1>
+            </div>
+        </div>
+
+            <!--div >
+
+                <nav-bar></nav-bar>
+
+            </div-->
+        <div class="row">
+            <div class="col-sm-2 " >
+            <nav-bar></nav-bar>
+
+            </div>
+            <div class="col-sm-10">
+                <h3>Description</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium enim
+                    illum quas soluta totam! Ab accusantium aliquam dicta doloribus, earum eveniet
+                    facere ipsa iusto maxime modi non odio, possimus praesentium!
+                </p>
+                <h3>Word of CTO</h3>
+                <img class="img-responsive img-circle pull-right" src="../images/hish.jpg" alt="" width="250" height="150">
+                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, cum dolorem eligendi eos fugit itaque iure necessitatibus non quidem quos sint velit voluptatum. Autem cupiditate fugit ipsum magni nesciunt vitae?</span><span>Aliquam assumenda aut cupiditate, est ex harum maiores nam nihil nulla numquam perferendis provident quisquam sunt veritatis voluptatem? Dolorum eligendi eos impedit maxime nemo non, quae quam rem sequi tempora.</span><span>Aliquam, ducimus inventore ipsum maiores neque quasi recusandae saepe! Animi aperiam, blanditiis eos error, eveniet fugiat in laudantium molestias mollitia officia, provident quae reiciendis repellendus rerum similique totam voluptates voluptatum.</span><span>Aspernatur assumenda aut, consequuntur deserunt dolore ducimus esse ipsum iste iusto magnam nemo nostrum nulla omnis pariatur, sint ullam veritatis. Architecto cum dignissimos eveniet, fuga illum inventore magni mollitia ullam.</span></p>
+            </div>
+
+        </div>
+    </div>
+
+    <div ng-controller="ShoppingCartCtrl">
+        This is the part where we can access values from the controller
+    </div>
+
+
+
+    <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="/js/project01.js"></script>
+    <script type="text/javascript" src="/js/controllers/AppCtrl.js"></script>
+    <script type="text/javascript" src="/js/directives/title.js"></script>
+    <script type="text/javascript" src="/js/directives/navBar.js"></script>
+    <script type="text/javascript" src="/js/services/itemtypes.js"></script>
+    <script type="text/javascript" src ="/js/controllers/ShoppingCartCtrl.js"></script>
+
+</body>
+</html>
