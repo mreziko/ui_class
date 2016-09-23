@@ -1,18 +1,35 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="shoppingCart">
+<!DOCtype html>
+<html>
     <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
     </head>
-    <body>
+    <body ng-app="shoppingCart">
 
-    <h1>First index</h1>
+        <div class="container-fluid" ng-controller="homeController">
 
-        <div ng-controller="ShoppingCartCtrl">
-            This is the part where we can access values from the controller
+            <div class="row" >
+
+                <div class="col-md-2">
+                    <nav-bar></nav-bar>
+                    <!--<div nav-bar> </div>-->
+                </div>
+
+                <div class="col-md-10" >
+                    <app-title></app-title>
+                </div>
+            </div>
         </div>
 
-    <script type="text/javascript" src="/node-module/angular/angular.js"></script>
-    <script type="text/javascript" src="/js/"></script>
+
+        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="/node_modules/angular-route/angular-route.js"></script>
+        <script type="text/javascript" src="/js/shoppingCart.js"></script>
+        <script type="text/javascript" src="/js/controllers/homeController.js"></script>
+        <script type="text/javascript" src="/js/services/product_type_service.js"></script>
+        <script type="text/javascript" src="/js/directives/leftNav.js"></script>
+        <script type="text/javascript" src="/js/directives/title.js"></script>
+
     </body>
 </html>
